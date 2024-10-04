@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 100px;
+  padding: 10px;
+}
+
+.nav-items {
+  padding: 0px 20px;
+}
+
+.nav-items > ul {
+  display: flex;
+  font-size: 24px;
+  list-style-type: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.res-card {
+  margin: 3px;
+  width: 340px;
+  padding: 10px 23px;
+  border-radius: 25px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.search {
+  padding: 10px;
+}
+
+.res-logo {
+  width: 100px;
+}
+
+h4,
+h3 {
+  margin: 0px;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-cards {
+  margin: 20px;
+  width: 340px;
+  height: 255px;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+}
+
+.login {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+}
+
+.res-logo {
+  width: 150px;
+  height: 150px;
+  padding: 30px;
+  display: flex;
+}
+
+.user-card {
+  padding: 10px;
+  border: 1px solid;
+}
