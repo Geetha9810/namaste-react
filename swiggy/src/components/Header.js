@@ -1,34 +1,38 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
 
+  const { loggedInUser } = useContext(UserContext);
+  // console.log(loggedInUser);
+
   return (
-    <div className="header">
+    <div className="flex justify-between bg-slate-300 shadow-lg">
       <div className="logo-image">
-        <img className="logo" src={LOGO_URL} />
+        <img className="w-25 h-24" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
-          <li>
+      <div className="flex items-center">
+        <ul className="flex p-4 m-4">
+          <li className="px-4">Online Status: {onlineStatus ? "✅" : "🔴"}</li>
+          <li className="px-4">
             <Link to="/"> Home</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about"> About</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact">Contact </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/grocery">Grocery </Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">Cart</li>
           <button
             className="login"
             onClick={() => {
@@ -39,6 +43,8 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
+
+          <li className="px-4 font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>

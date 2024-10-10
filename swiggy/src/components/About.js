@@ -7,7 +7,7 @@ const About = () => {
       <h1>About</h1>
       <h2>This is Namaste React Web Series</h2>
       <User />
-      <UserClass />
+      {/* <UserClass /> */}
     </div>
   );
 };
