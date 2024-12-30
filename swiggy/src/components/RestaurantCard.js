@@ -1,6 +1,6 @@
-import { useContext } from "react";
+// import { useContext } from "react";
+// import UserContext from "../utils/UserContext";
 import { CDN_URL } from "../utils/constants";
-import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
